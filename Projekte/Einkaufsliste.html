@@ -1,1 +1,96 @@
+<html>
+<head>
+ 
+ <meta charset="utf-8">
+<title>Einkaufsliste</title>
+<script>
+
+var liste = ["Salat" , "Birne" , "Apfel" , "Kiwi"];
+
+     function hinzufuegen() {
+         var neuesProdukt = document.getElementById("eingabe").value;
+		 liste [liste.length] = neuesProdukt;
+		 ausgabe ();
+		            }
+		 	 
+    function sortieren()  {
+		 liste.sort();
+		 ausgabe();
+		                  } 
+		 
+	function ausgabe() {
+	     var ausgabeText = "Die Liste beinhaltet: <br>";
+		 for (var i = 0; i < liste.length; i++) {
+		     ausgabeText += i+1 + "." + liste[i] + "<br>"
+			 }
+	      document.getElementById("ausgabe").innerHTML = ausgabeText;	 
+                      }
+					  
+function SelectionSort () {
+   for(var i = 0; i < liste.length; i++) {
+   var min = i;
+	  for(var j = i+1; j < liste.length; j++) {
+	    if(liste[j] < liste[min]) {
+	    min = j;
+	    }			  
+      }
+	  vertausche(i, min);
+   }
+  ausgabe(); 
+ }      
+
+function BubbleSort () {
+var vertauscht = true;
+ while(vertauscht) {
+	vertauscht = false;
+	for(var i = 0; i < liste.length - 1; i++) {
+		if(liste[i] > liste[i+1]) {
+			vertauscht = true;
+			vertausche(i, i+1);
+		}
+	
+	}
+ } 
+ausgabe();
+}
+
+function vertausche (a, b) {
+var hilfe = liste[a];
+liste[a] = liste[b];
+liste[b] = hilfe;
+}
+
+function mischen() {
+ for(var i = 0; i < 100; i++) {
+ var zufallz1 = Math.floor(Math.random()*liste.length);
+ var zufallz2 = Math.floor(Math.random()*liste.length);
+ vertausche(zufallz1, zufallz2);
+ }
+ ausgabe();
+ }
+
+</script>
+
+</head>
+
+<body>
+<h1>Einkaufsliste</h1>
+
+<input type="text" id="eingabe">
+<br>
+<input type="button" value="Hinzufügen" onclick="hinzufuegen()">
+<br>
+<input type="button" value="sortieren" onclick="sortieren()">
+<br>
+<input type="button" value="SelectionSort" onclick="SelectionSort()">
+<br>
+<input type="button" value="BubbleSort" onclick="BubbleSort()">
+<br>
+<input type="button" value="Mischen" onclick="mischen()">
+<p id= "ausgabe">Die Liste beinhaltet:</p>
+<script>
+ausgabe();
+</script>
+</body>
+</html>
 
