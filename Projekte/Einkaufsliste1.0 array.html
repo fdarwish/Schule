@@ -1,0 +1,47 @@
+<html>
+<head>
+ 
+ <meta charset="utf-8">
+<title>Größe Formel</title>
+<script>
+
+var liste = []; //(new array)//
+
+     function hinzufuegen() {
+ 
+         var neuesProdukt = document.getElementById("eingabe").value;
+		 liste [liste.length] = neuesProdukt;
+		 ausgabe ();
+		 }
+		 
+		 
+		 function sortieren()  {
+		 liste.sort();
+		 ausgabe();
+		 }
+		 
+		 
+	 function ausgabe() {
+	     var ausgabeText = "In deiner Liste ist: <br>";
+		 for (var i = 0; i < liste.length; i++) {
+		     ausgabeText += i+1 + "." + liste[i] + "<br>"
+			 }
+	      document.getElementById("ausgabe").innerHTML = ausgabeText;	 
+}
+
+</script>
+
+</head>
+
+<body>
+<h1>Einkaufsliste</h1>
+
+<input type="text" id="eingabe">
+<br>
+<input type="button" value="hinzufuegen" onclick="hinzufuegen()">
+<br>
+<input type="button" value="sortieren" onclick="sortieren()">
+<br>
+<p id= "ausgabe">noch nichts auf der Liste</p>
+</body>
+</html>
