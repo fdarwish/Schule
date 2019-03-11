@@ -1,0 +1,34 @@
+<html>
+<head>
+
+ <meta charset="utf-8">
+ <title>Weitwurf berechnen</title>
+ 
+ <script>
+ 
+ 
+ 
+ 
+     var v0 = prompt ("Gib mir ein Anfangspunkt:");
+	 var winkel= prompt ("Gib mir ein Winkel:");
+	 var g = 9.81
+	 var bm = winkel*Math.PI/180
+	 var weite = v0*v0*Math.sin(2*bm)/g
+	 var gerundeteWeite = Math.round(weite*100)/100;
+	 
+	 
+	 
+	 var ausgabeText = (" Die Weite berägt " + gerundeteWeite +".");
+	 
+     alert(ausgabeText);
+	 
+ 
+ </script>
+ 
+ </head>
+ 
+ <body>
+ <h1>Weitwurf</h1>
+ </body>
+ </html>
+ 
