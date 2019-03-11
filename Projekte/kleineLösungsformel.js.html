@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+<script>
+
+	  
+function kleineFunktion() {
+ 
+ var p = parseInt (document.getElementById("p") .value);
+ var q = parseInt (document.getElementById("q") . value);
+ 
+ var diskriminante = (p/2)*(p/2) - q;
+ //diskriminante = Math.pow(p/2, 2) - q;
+ 
+ if (diskriminante < 0) {
+ //Diskriminante ist kleiner 0 => keine Lösung
+   ausgabeText = "Es gibt keine Lösung in den reellen Zahlen"
+   }
+   
+if (diskriminante == 0) {
+//alert ("Diskriminante ist gleich 0";
+var loesung = -p/2;
+ausgabeText= "Das Ergebnis ist " + loesung;
+}
+
+if (diskriminante > 0) {
+//Diskriminante ist Gößer 0 => 2 Lösungen
+var x1 = -(p/2)+Math.sqrt(diskriminante);
+var x2 = -(p/2)-Math.sqrt(diskriminante);
+
+ausgabeText = "x1 = " +x1 + "x2= " +x2;
+
+
+
+}
+
+document.getElementById("ausgabeText") .innerHTML= ausgabeText;
+
+}
+</script>
+</head>
+
+
+<body>
+<h1> Kleine Lösungsformel für quadratishe Gleichung</h1>
+
+x² + <input type="text" id="p" style="width:30">
+x + <input type="text" id="q" style="width:30"> = 0
+<br><br>
+<input type="button" value="brechne die diskriminante" onclick="kleineFunktion()">
+<p id= "ausgabeText"></p>
+
+</body>
+</html>
