@@ -1,0 +1,40 @@
+<html>
+<head>
+
+ <meta charset="utf-8">
+ <title>Falldauer des Handys</title>
+ 
+</head> 
+<body>
+<h1>Falldauer</h1>
+
+<table border="1px">
+
+<tr><th> Abwurfhöhe </th><th> Falldauer </th></tr>
+<script>
+
+
+var g = 9.81;
+
+for(var h =2; h < 101; h=h+2) {
+
+var zeit = Math.sqrt(2*h/g)
+var zeit2 = zeit*100
+var time = Math.round(zeit2)
+time = time/100
+
+document.write("<tr>");
+document.write("<td>" + h + "</td>");
+document.write("<td>" + time + "</td>");
+document.write("</tr>");
+}
+
+</script>
+</table>
+</body>
+</html>
+
+
+
+
+
