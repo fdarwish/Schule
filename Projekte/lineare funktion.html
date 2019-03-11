@@ -1,0 +1,58 @@
+<html>
+<head>
+
+ <meta charset="utf-8">
+ <title>Funktionen</title>
+ 
+
+ 
+<script>
+
+function linfun () {
+var k = parseInt (document.getElementById("k") .value);
+var d = parseInt (document.getElementById("d") .value);
+
+document.getElementById("linfun") .innerHTML= "y =" + k + "x" + d;
+
+
+if (k>0) {
+ausgabetext = "Die Funktion ist steigend"
+}
+
+if (k < 0) {  
+ausgabetext += "Die Funktion ist fallend" 
+}
+
+if  ( k == 0) { 
+ausgabetext += "Die Funktion ist konstant" 
+}
+
+if ( d > 0 ) {
+ausgabetext += "Die Funktion schneidet die y-Achse im positiven y-Bereich"
+}
+
+if ( d < 0 ) {
+ausgabetext += "Die Funktion schneidet die y-Achse im negateiven y-Bereich"
+}
+
+ if ( d == 0 ) {
+ ausgabetext += "Die Funktion geht durch den Punkt (0|0)"
+ }
+ 
+ document.getElementById("linfun") .innerHTML= ausgabetext ;
+
+}
+</script>
+ 
+<body> 
+<h1>Lineare Funktion</h1>
+
+y= <input type="text" id="k" style="width:30"> * x + 
+<input type="text" id="d" style="width:30">
+<br><br>
+<input type="button" value="Eigenschaft" onclick="linfun()">
+<p id= "linfun"></p>
+
+</body>
+</head>
+</html>
