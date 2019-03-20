@@ -1,0 +1,27 @@
+   h1 {
+		 font-family: "Arial";
+		 font-size:   50px;
+		 color: white;
+		 }
+     body {
+	 background-color: black;
+	 background-image: linear-gradient(to bottom right,rgb(228, 27, 232),rgb(49, 109, 214),rgb(101, 49, 214),rgb(134, 49, 214),rgb(178, 49, 214),rgb(228, 27, 232));
+	 }
+	 h2 {
+	 font-family: "Arial";
+	font-size:   25px;
+     color: white;
+	 }
+	  .rahmen {
+		 border-width: 10px;
+		 border-style: double;
+		 border-color: black;
+		 padding: 20px;
+		 }
+		 h3 {
+		font-family: "Arial";
+		 font-size:   20px;
+		 color: white; }
+		 a:visited {
+		 color: rgb(130, 177, 255);
+		 }
