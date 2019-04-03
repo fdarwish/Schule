@@ -1,0 +1,104 @@
+<html>
+<head>
+  <meta charset="utf-8">
+	<title> Größter gemeinsamer Teiler </title>
+	
+<style>
+
+body {
+margin: 0;
+}
+
+.grid-box {
+       width: 95%;
+	   height: 95%;
+	   display: grid;
+	   grid-template-columns: 50% 50%;
+	   grid-template-rows: 23% 40% 40%;
+}
+
+.box-1 {
+background-color: black;
+grid-column-start: 1;
+grid-column-end: 3;
+grid-row-start: 1;
+grid-row-end: 2;
+}
+
+.box-2 {
+background-color: rgb(29, 110, 242);
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 2;
+grid-row-end: 3;
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-3 {
+background-color: green;
+grid-column-start: 2;
+grid-column-end: 3;
+grid-row-start: 2;
+grid-row-end: 3;
+}
+
+.box-4 { 
+background-color: green;
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 3;
+grid-row-end: 4;
+}
+
+.box-5 {
+background-color: rgb(29, 110, 242);
+grid-column-start: 2; 
+grid-column-end: 3;
+grid-row-start: 3;
+grid-row-end: 4;
+}
+
+div {
+padding-left: 30;
+padding-right: 30;
+padding-bottom: 20;
+padding-top: 20;
+margin: 10;
+}
+
+img {
+object-fit: contain;
+height: 100%;
+width: 100%;
+}
+
+#border1 {
+border-style: solid;
+  border-width: 5px;
+  
+  }
+#border2 {
+border-style: solid;
+  border-width: 5px;
+  }
+
+	   </style>
+</head>
+
+<body>
+
+<div class="grid-box">
+   <div class="box-1"><img src="https://simply-communicate.com/wp-content/uploads/2013/11/featured.png"></div>
+   
+   <div class="box-2">
+   <img id= "border1" src="https://limes-8.com/de/wp-content/uploads/sites/2/2016/12/Larry_4x3_use-1.jpg">
+   </div>
+   <div class="box-3"></div>
+   <div class="box-4"></div>
+   <div class="box-5"><img id="border2" src="https://media.brstatic.com/2017/09/25131837/sergey-brin-getty-mst-354x420.jpg"></div>
+   </div>
+   
+</body>
+</html>
