@@ -1,0 +1,96 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <title> Bildergalerie  </title>
+ <style>
+      body { background-color: #2778f9;
+	  }
+	  
+	  
+	  h1 {
+	  color: #f6ff00;
+	  font-family: Times New Roman;
+	  border: 4px solid #f6ff00;
+	  background-color: #4286f4;
+	  text-align: center;
+	  }
+	  
+ 
+ .buttonRight {
+  position: absolute;
+  top: 45%;
+  right: 20;
+  margin: 20px;
+	  background-color: #f6ff00;
+    border: none;
+    color: #3b6ae2;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ }
+ 
+  .buttonLeft {
+  position: absolute;
+  top: 45%;
+  left: 20;
+  margin: 20px;
+	  background-color:  #f6ff00;
+    border: none;
+    color: #3b6ae2;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ }
+ 
+ 
+ 
+ #bild { 
+ border: 4px solid #f6ff00;
+ 
+ }
+ 
+ </style>
+ 
+ <script>
+     var index = 0;
+     var bilder = ["image1.jpeg", "image2.jpeg", "image3.jpeg", "image4.jpeg", "image5.jpeg", "image6.jpeg", "image7.jpeg"];
+	  
+	 function nextImage() {
+	 index++;
+	 
+	 if (index >= bilder.length) {
+	 index = 0;
+	 }
+	 document.getElementById("bild").src = bilder[index];
+	 }
+	 
+	 
+	 function prevImage() {
+	 index--;
+	 
+	 if (index < 0) {
+	     index = bilder.length -1;
+		 }
+	
+	 document.getElementById("bild").src = bilder[index];
+	 }
+	 
+ </script>
+</head> 
+
+<body>
+
+<h1>Sommerbilder</h1>
+<center>
+<input type="button" class="buttonLeft" value="Vorheriges Bild" onclick="prevImage()">
+<input type="button" class="buttonRight" value="Nächstes Bild" onclick="nextImage()">
+</center>
+<center>
+<img id="bild" width="50%" src="image2.jpeg">
+</center>
+</body>
+</html>
